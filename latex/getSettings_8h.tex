@@ -1,0 +1,109 @@
+\doxysection{get\+Settings.\+h File Reference}
+\hypertarget{getSettings_8h}{}\label{getSettings_8h}\index{getSettings.h@{getSettings.h}}
+
+
+Default settings and setting acquisition header file.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsettingStruct}{setting\+Struct}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{getSettings_8h_ad1482e771f3273378c389e8b008cab70}\label{getSettings_8h_ad1482e771f3273378c389e8b008cab70} 
+\#define {\bfseries MAX\+\_\+\+BUFFER\+\_\+\+LEN}~101
+\item 
+\Hypertarget{getSettings_8h_ab93c225a36fdba954bfa835fa875dc33}\label{getSettings_8h_ab93c225a36fdba954bfa835fa875dc33} 
+\#define {\bfseries DEFAULT\+\_\+\+LOG\+\_\+\+NAME}~"{}log.\+txt"{}
+\item 
+\Hypertarget{getSettings_8h_a653dcc0a992baf99d4946f23bea98ca8}\label{getSettings_8h_a653dcc0a992baf99d4946f23bea98ca8} 
+\#define {\bfseries DEFAULT\+\_\+\+DEBUG}~true
+\item 
+\Hypertarget{getSettings_8h_a1ca69b486f0f85c11c10df8a1dd00f94}\label{getSettings_8h_a1ca69b486f0f85c11c10df8a1dd00f94} 
+\#define {\bfseries DEFAULT\+\_\+\+PERIOD\+\_\+S}~1.\+5f
+\item 
+\Hypertarget{getSettings_8h_a1105ed19c33c34f713081bda0f28f8b2}\label{getSettings_8h_a1105ed19c33c34f713081bda0f28f8b2} 
+\#define {\bfseries MAX\+\_\+\+PERIOD\+\_\+S}~3600
+\item 
+\Hypertarget{getSettings_8h_a1e5c5794c9cc8928e9d848aba0a6e6cc}\label{getSettings_8h_a1e5c5794c9cc8928e9d848aba0a6e6cc} 
+\#define {\bfseries HELP\+\_\+\+CMD}~"{}h"{}
+\item 
+\Hypertarget{getSettings_8h_ab997bc0f1a16365388f165df15840452}\label{getSettings_8h_ab997bc0f1a16365388f165df15840452} 
+\#define {\bfseries DEBUG\+\_\+\+CMD}~"{}d"{}
+\item 
+\Hypertarget{getSettings_8h_a891f21dff9a8c8d428178e7f36c537fa}\label{getSettings_8h_a891f21dff9a8c8d428178e7f36c537fa} 
+\#define {\bfseries CYCLE\+\_\+\+PERIOD\+\_\+\+CMD}~"{}t"{}
+\item 
+\Hypertarget{getSettings_8h_a30b93c003c5b42ec061b720414c2f299}\label{getSettings_8h_a30b93c003c5b42ec061b720414c2f299} 
+\#define {\bfseries LOG\+\_\+\+FILE\+\_\+\+CMD}~"{}l"{}
+\item 
+\Hypertarget{getSettings_8h_a9ef7e071c19c269106af126a0dcb606a}\label{getSettings_8h_a9ef7e071c19c269106af126a0dcb606a} 
+\#define {\bfseries QUIT\+\_\+\+CMD}~"{}q"{}
+\item 
+\Hypertarget{getSettings_8h_ae4191c14079453868a6fc88a17fd5472}\label{getSettings_8h_ae4191c14079453868a6fc88a17fd5472} 
+\#define {\bfseries CMD\+\_\+\+STRING}~"{}hd\+:t\+:l\+:"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{getSettings_8h_a7f1f382e5382c43edc9cdff9f1f99fdf}\label{getSettings_8h_a7f1f382e5382c43edc9cdff9f1f99fdf} 
+typedef struct \mbox{\hyperlink{structsettingStruct}{setting\+Struct}} {\bfseries Setting\+Struct}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{getSettings_8h_a6e99e4fafa4f4a2e3a4a18546759acef}{get\+Settings}} (\mbox{\hyperlink{structsettingStruct}{Setting\+Struct}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structsettingStruct}{setting\+Struct}}, int argc, char \texorpdfstring{$\ast$}{*}const argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em get settings and options \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Default settings and setting acquisition header file. 
+
+\begin{DoxyAuthor}{Author}
+Dario Chiantello 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/09-\/19 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+//compiler command\+: gcc \doxylink{app_8c}{app.\+c} \doxylink{getSettings_8c}{get\+Settings.\+c} -\/lm -\/o app
+\end{DoxyNote}
+\begin{DoxyCopyright}{Copyright}
+GNU 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{getSettings_8h_a6e99e4fafa4f4a2e3a4a18546759acef}\label{getSettings_8h_a6e99e4fafa4f4a2e3a4a18546759acef} 
+\index{getSettings.h@{getSettings.h}!getSettings@{getSettings}}
+\index{getSettings@{getSettings}!getSettings.h@{getSettings.h}}
+\doxysubsubsection{\texorpdfstring{getSettings()}{getSettings()}}
+{\footnotesize\ttfamily int get\+Settings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsettingStruct}{Setting\+Struct}} \texorpdfstring{$\ast$}{*}}]{setting\+Struct,  }\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}const}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+get settings and options 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structsettingStruct}{setting\+Struct}} & \\
+\hline
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 terminate program failure, 1 terminate program success, 0 continue 
+\end{DoxyReturn}

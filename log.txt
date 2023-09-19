@@ -1,0 +1,54 @@
+Settings:
+-Cycle period (sec): 2.5 
+-Log file: log.txt
+
+Type a control sequence (0101001...) and press enter.
+>2.502
+>5.005
+>7.508
+>10.010
+New control sequence:
+1010101010000011
+[ON]>0.000
+[OFF]>2.502
+[ON]>5.005
+[OFF]>7.507
+[ON]>10.010
+[OFF]>12.512
+[ON]>15.014
+[OFF]>17.517
+[ON]>20.020
+[OFF]>22.522
+[OFF]>25.025
+[OFF]>27.528
+[OFF]>30.031
+[OFF]>32.533
+[ON]>35.034
+[ON]>37.537
+No input sequence.
+>40.038
+>42.541
+>45.043
+>47.546
+New control sequence:
+111000111
+[ON]>0.000
+[ON]>2.503
+[ON]>5.004
+[OFF]>7.507
+New control sequence:
+10101010
+[ON]>0.000
+[OFF]>2.503
+[ON]>5.005
+[OFF]>7.508
+[ON]>10.011
+[OFF]>12.514
+[ON]>15.016
+[OFF]>17.519
+No input sequence.
+>20.022
+>22.525
+>25.027
+>27.530
+Quit application

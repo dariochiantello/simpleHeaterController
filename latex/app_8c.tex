@@ -1,0 +1,201 @@
+\doxysection{app.\+c File Reference}
+\hypertarget{app_8c}{}\label{app_8c}\index{app.c@{app.c}}
+
+
+Simple heater controller.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include "{}get\+Settings.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structappStruct}{app\+Struct}}
+\begin{DoxyCompactList}\small\item\em application control struct \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcontrolStruct}{control\+Struct}}
+\begin{DoxyCompactList}\small\item\em heater control struct \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{app_8c_ae097f49809d0fbb7a3b40508c7b50283}\label{app_8c_ae097f49809d0fbb7a3b40508c7b50283} 
+typedef struct timeval {\bfseries Timeval}
+\item 
+\Hypertarget{app_8c_a7d456c6d81dcf74cb13faf990e434c86}\label{app_8c_a7d456c6d81dcf74cb13faf990e434c86} 
+typedef struct \mbox{\hyperlink{structappStruct}{app\+Struct}} {\bfseries App\+Struct}
+\begin{DoxyCompactList}\small\item\em application control struct \end{DoxyCompactList}\item 
+\Hypertarget{app_8c_af5f1638277c65d7c512ca59a805f9517}\label{app_8c_af5f1638277c65d7c512ca59a805f9517} 
+typedef struct \mbox{\hyperlink{structcontrolStruct}{control\+Struct}} {\bfseries Control\+Struct}
+\begin{DoxyCompactList}\small\item\em heater control struct \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{app_8c_a3f2abe979f74000d14a7538534d68846}{terminate\+App}} (\mbox{\hyperlink{app_8c_a7d456c6d81dcf74cb13faf990e434c86}{App\+Struct}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structappStruct}{app\+Struct}}, int stat)
+\begin{DoxyCompactList}\small\item\em application terminator \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8c_a45cb2264a392b81187938c293237423d}{log\+Print}} (bool allow\+Terminal, \mbox{\hyperlink{app_8c_a7d456c6d81dcf74cb13faf990e434c86}{App\+Struct}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structappStruct}{app\+Struct}}, const char \texorpdfstring{$\ast$}{*}fmt,...)
+\begin{DoxyCompactList}\small\item\em Print to terminal and log file. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{app_8c_a51161aa34d1c70d84714ef29f69fa269}{time\+Log}} (void)
+\begin{DoxyCompactList}\small\item\em get double timestamp in seconds \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{app_8c_acdf8e716a37e3cdf098b6a80e852b0e4}{txrx}} (\mbox{\hyperlink{app_8c_a7d456c6d81dcf74cb13faf990e434c86}{App\+Struct}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structappStruct}{app\+Struct}}, \mbox{\hyperlink{app_8c_af5f1638277c65d7c512ca59a805f9517}{Control\+Struct}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structcontrolStruct}{control\+Struct}})
+\begin{DoxyCompactList}\small\item\em receive commands and manage tx cycles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8c_a06a15e4d8b67899e5359b2eb8118ebdc}{control\+Output}} (\mbox{\hyperlink{app_8c_a7d456c6d81dcf74cb13faf990e434c86}{App\+Struct}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structappStruct}{app\+Struct}}, \mbox{\hyperlink{app_8c_af5f1638277c65d7c512ca59a805f9517}{Control\+Struct}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structcontrolStruct}{control\+Struct}})
+\begin{DoxyCompactList}\small\item\em manages the heater sequence commands \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8c_aee1a5fea0af1da1df144e62c83179cd0}{set\+Period}} (Timeval \texorpdfstring{$\ast$}{*}timeval, float period)
+\begin{DoxyCompactList}\small\item\em Set cycle period. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{app_8c_af3ed9c200de85b53c94cd18764b246a2}{main}} (int argc, char \texorpdfstring{$\ast$}{*}const argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main function \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple heater controller. 
+
+\begin{DoxyAuthor}{Author}
+Dario Chiantello 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/09-\/19 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+//compiler command\+: gcc \doxylink{app_8c}{app.\+c} \doxylink{getSettings_8c}{get\+Settings.\+c} -\/lm -\/o app
+\end{DoxyNote}
+\begin{DoxyCopyright}{Copyright}
+GNU 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{app_8c_a06a15e4d8b67899e5359b2eb8118ebdc}\label{app_8c_a06a15e4d8b67899e5359b2eb8118ebdc} 
+\index{app.c@{app.c}!controlOutput@{controlOutput}}
+\index{controlOutput@{controlOutput}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{controlOutput()}{controlOutput()}}
+{\footnotesize\ttfamily void control\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{app_8c_a7d456c6d81dcf74cb13faf990e434c86}{App\+Struct}} \texorpdfstring{$\ast$}{*}}]{app\+Struct,  }\item[{\mbox{\hyperlink{app_8c_af5f1638277c65d7c512ca59a805f9517}{Control\+Struct}} \texorpdfstring{$\ast$}{*}}]{control\+Struct }\end{DoxyParamCaption})}
+
+
+
+manages the heater sequence commands 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structappStruct}{app\+Struct}} & \\
+\hline
+{\em \doxylink{structcontrolStruct}{control\+Struct}} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{app_8c_a45cb2264a392b81187938c293237423d}\label{app_8c_a45cb2264a392b81187938c293237423d} 
+\index{app.c@{app.c}!logPrint@{logPrint}}
+\index{logPrint@{logPrint}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{logPrint()}{logPrint()}}
+{\footnotesize\ttfamily void log\+Print (\begin{DoxyParamCaption}\item[{bool}]{allow\+Terminal,  }\item[{\mbox{\hyperlink{app_8c_a7d456c6d81dcf74cb13faf990e434c86}{App\+Struct}} \texorpdfstring{$\ast$}{*}}]{app\+Struct,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Print to terminal and log file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allow\+Terminal} & \\
+\hline
+{\em \doxylink{structappStruct}{app\+Struct}} & \\
+\hline
+{\em fmt} & \\
+\hline
+{\em ...} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{app_8c_af3ed9c200de85b53c94cd18764b246a2}\label{app_8c_af3ed9c200de85b53c94cd18764b246a2} 
+\index{app.c@{app.c}!main@{main}}
+\index{main@{main}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}const}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+main function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{app_8c_aee1a5fea0af1da1df144e62c83179cd0}\label{app_8c_aee1a5fea0af1da1df144e62c83179cd0} 
+\index{app.c@{app.c}!setPeriod@{setPeriod}}
+\index{setPeriod@{setPeriod}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{setPeriod()}{setPeriod()}}
+{\footnotesize\ttfamily void set\+Period (\begin{DoxyParamCaption}\item[{Timeval \texorpdfstring{$\ast$}{*}}]{timeval,  }\item[{float}]{period }\end{DoxyParamCaption})}
+
+
+
+Set cycle period. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeval} & \\
+\hline
+{\em period} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{app_8c_a3f2abe979f74000d14a7538534d68846}\label{app_8c_a3f2abe979f74000d14a7538534d68846} 
+\index{app.c@{app.c}!terminateApp@{terminateApp}}
+\index{terminateApp@{terminateApp}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{terminateApp()}{terminateApp()}}
+{\footnotesize\ttfamily void terminate\+App (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{app_8c_a7d456c6d81dcf74cb13faf990e434c86}{App\+Struct}} \texorpdfstring{$\ast$}{*}}]{app\+Struct,  }\item[{int}]{stat }\end{DoxyParamCaption})}
+
+
+
+application terminator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structappStruct}{app\+Struct}} & \\
+\hline
+{\em stat} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{app_8c_a51161aa34d1c70d84714ef29f69fa269}\label{app_8c_a51161aa34d1c70d84714ef29f69fa269} 
+\index{app.c@{app.c}!timeLog@{timeLog}}
+\index{timeLog@{timeLog}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{timeLog()}{timeLog()}}
+{\footnotesize\ttfamily double time\+Log (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+get double timestamp in seconds 
+
+\begin{DoxyReturn}{Returns}
+timestamp 
+\end{DoxyReturn}
+\Hypertarget{app_8c_acdf8e716a37e3cdf098b6a80e852b0e4}\label{app_8c_acdf8e716a37e3cdf098b6a80e852b0e4} 
+\index{app.c@{app.c}!txrx@{txrx}}
+\index{txrx@{txrx}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{txrx()}{txrx()}}
+{\footnotesize\ttfamily int txrx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{app_8c_a7d456c6d81dcf74cb13faf990e434c86}{App\+Struct}} \texorpdfstring{$\ast$}{*}}]{app\+Struct,  }\item[{\mbox{\hyperlink{app_8c_af5f1638277c65d7c512ca59a805f9517}{Control\+Struct}} \texorpdfstring{$\ast$}{*}}]{control\+Struct }\end{DoxyParamCaption})}
+
+
+
+receive commands and manage tx cycles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structappStruct}{app\+Struct}} & \\
+\hline
+{\em \doxylink{structcontrolStruct}{control\+Struct}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 terminate program failure, 1 terminate program success, 0 continue 
+\end{DoxyReturn}

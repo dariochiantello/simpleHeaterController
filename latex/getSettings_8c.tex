@@ -1,0 +1,86 @@
+\doxysection{get\+Settings.\+c File Reference}
+\hypertarget{getSettings_8c}{}\label{getSettings_8c}\index{getSettings.c@{getSettings.c}}
+
+
+Setting acquisition.  
+
+
+{\ttfamily \#include "{}get\+Settings.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{getSettings_8c_a1a961c20f13813f86014068b4aa45fd7}{check\+File\+Name}} (char \texorpdfstring{$\ast$}{*}file\+Name)
+\begin{DoxyCompactList}\small\item\em input filename string check (to be implemented) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{getSettings_8c_a6e99e4fafa4f4a2e3a4a18546759acef}{get\+Settings}} (\mbox{\hyperlink{structsettingStruct}{Setting\+Struct}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structsettingStruct}{setting\+Struct}}, int argc, char \texorpdfstring{$\ast$}{*}const argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em get settings and options \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{getSettings_8c_a32ba58c1abc47e5aad6940e7b625a1e2}\label{getSettings_8c_a32ba58c1abc47e5aad6940e7b625a1e2} 
+char {\bfseries default\+Log\+Name} \mbox{[}$\,$\mbox{]} = DEFAULT\+\_\+\+LOG\+\_\+\+NAME
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Setting acquisition. 
+
+\begin{DoxyAuthor}{Author}
+Dario Chiantello 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/09-\/19 
+\end{DoxyDate}
+\begin{DoxyNote}{Note}
+//compiler command\+: gcc \doxylink{app_8c}{app.\+c} \doxylink{getSettings_8c}{get\+Settings.\+c} -\/lm -\/o app
+\end{DoxyNote}
+\begin{DoxyCopyright}{Copyright}
+GNU 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{getSettings_8c_a1a961c20f13813f86014068b4aa45fd7}\label{getSettings_8c_a1a961c20f13813f86014068b4aa45fd7} 
+\index{getSettings.c@{getSettings.c}!checkFileName@{checkFileName}}
+\index{checkFileName@{checkFileName}!getSettings.c@{getSettings.c}}
+\doxysubsubsection{\texorpdfstring{checkFileName()}{checkFileName()}}
+{\footnotesize\ttfamily bool check\+File\+Name (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+input filename string check (to be implemented) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structappStruct}{app\+Struct}} & \\
+\hline
+{\em stat} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if format ok 
+\end{DoxyReturn}
+\Hypertarget{getSettings_8c_a6e99e4fafa4f4a2e3a4a18546759acef}\label{getSettings_8c_a6e99e4fafa4f4a2e3a4a18546759acef} 
+\index{getSettings.c@{getSettings.c}!getSettings@{getSettings}}
+\index{getSettings@{getSettings}!getSettings.c@{getSettings.c}}
+\doxysubsubsection{\texorpdfstring{getSettings()}{getSettings()}}
+{\footnotesize\ttfamily int get\+Settings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsettingStruct}{Setting\+Struct}} \texorpdfstring{$\ast$}{*}}]{setting\+Struct,  }\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}const}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+get settings and options 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structsettingStruct}{setting\+Struct}} & \\
+\hline
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 terminate program failure, 1 terminate program success, 0 continue 
+\end{DoxyReturn}

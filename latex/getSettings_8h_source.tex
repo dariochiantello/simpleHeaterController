@@ -1,0 +1,48 @@
+\doxysection{get\+Settings.\+h}
+\hypertarget{getSettings_8h_source}{}\label{getSettings_8h_source}\mbox{\hyperlink{getSettings_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ GET\_SETTINGS}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ GET\_SETTINGS}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ MAX\_BUFFER\_LEN\ \ \ \ \ \ \ \ \ \ 101}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ DEFAULT\_LOG\_NAME\ \ \ \ \ \ \ \ "{}log.txt"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ DEFAULT\_DEBUG\ \ \ \ \ \ \ \ \ \ \ true}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ DEFAULT\_PERIOD\_S\ \ \ \ \ \ \ \ 1.5f}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ MAX\_PERIOD\_S\ \ \ \ \ \ \ \ \ \ \ \ 3600}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ HELP\_CMD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}h"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ DEBUG\_CMD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}d"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ CYCLE\_PERIOD\_CMD\ \ \ \ \ \ \ \ "{}t"{}}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ LOG\_FILE\_CMD\ \ \ \ \ \ \ \ \ \ \ \ "{}l"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ QUIT\_CMD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}q"{}}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ CMD\_STRING\ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}hd:t:l:"{}}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsettingStruct}{settingStruct}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ *\ debug;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{char}\ \ *\ logFile;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ *\ cyclePeriod;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \}\mbox{\hyperlink{structsettingStruct}{SettingStruct}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{getSettings_8h_a6e99e4fafa4f4a2e3a4a18546759acef}{getSettings}}(\mbox{\hyperlink{structsettingStruct}{SettingStruct}}\ *\ \mbox{\hyperlink{structsettingStruct}{settingStruct}},\ \textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *\ \textcolor{keyword}{const}\ argv[]);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00054\ }
+
+\end{DoxyCode}
