@@ -6,10 +6,10 @@ Compile using GCC (Linux Ubuntu): gcc app.c getSettings.c -lm -o app
 
  -h for help
 
-./app -d <0> run normal mode
-./app -d <1> run debug mode
+ -d <0> run normal mode
+ -d <1> run debug mode
 
-./app -t <sec> set heater cycle in seconds (default 2.5)
+ -t <sec> set heater cycle in seconds (default 2.5)
 
 Arbitrary length of the control sequence up to max buffer size. 
 Log file automatically generated when starting the app in debug mode.
